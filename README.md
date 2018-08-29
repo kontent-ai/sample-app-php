@@ -72,3 +72,5 @@ When using this sample application with some versions of PHP (reproduced on v7.1
 ## Author
 
 We would like to express our thanks to [Stephen Rushing](https://github.com/stephenr85) who created this sample application.
+
+![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/kentico-cloud-sample-app-php?pixel)
