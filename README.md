@@ -50,6 +50,16 @@ You can find the Delivery and other SDKs at https://github.com/Kentico.
 
 When using this sample application with some versions of PHP (reproduced on v7.1.13, 7.1.18 and 7.2), one of the dependencies ([sunra/php-simple-html-dom-parser](https://github.com/sunra/php-simple-html-dom-parser/)) tends to get stuck in an endless loop of calls to its own destructor. We worked-around this issue by renaming destructors in fetched dependencies every time they are changed. For futher reference, please see the [issue in package's repository repository](https://github.com/sunra/php-simple-html-dom-parser/issues/60).
 
+## Feedback & Contributing
+
+Check out the [contributing](https://github.com/Kentico/kentico-cloud-sample-app-php/blob/master/CONTRIBUTING.md) page to see the best places to file issues, start discussions, and begin contributing.
+
+### Developing on Windows
+Have a look at our cool [tutorial](https://github.com/Kentico/delivery-sdk-php/wiki/Developing-PHP-in-Visual-Studio-Code-for-Dummies) on developing PHP on Windows with Visual Studio Code!
+
+### Developing on Linux
+Do you prefer penguins? Check out our [tutorials](https://github.com/Kentico/delivery-sdk-php/wiki/Configuring-PHP-Storm-on-Linux) on developing PHP on Linux with PhpStorm!
+
 ## Author
 
 We would like to express our thanks to [Stephen Rushing](https://github.com/stephenr85) who created this sample application.
