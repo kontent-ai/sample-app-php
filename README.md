@@ -14,7 +14,9 @@ Alternatively you can also deploy your application to your apache server just by
 
 ### Connecting your project
 
-If you want to change the source Kentico Cloud project, follow these steps:
+This sample website displays content from a Sample Project that demonstrates Kentico Cloud features and best practices. This fully featured project contains marketing content for Dancing Goat – an imaginary chain of coffee shops. By default, this sample website uses a shared project where the content remains constant for everyone.
+
+You can change the source Kentico Cloud project to your own project to be able to change the content. If you don't have your own Sample Project, any admin of a Kentico Cloud subscription [can generate one](https://app.kenticocloud.com/sample-project-generator). When you have a Sample Project, follow these steps to connect it to this sample website:
 
 1. In Kentico Cloud, choose Project settings from the app menu.
 2. Under Development, choose API keys.
@@ -23,7 +25,7 @@ If you want to change the source Kentico Cloud project, follow these steps:
 5. Find `new DeliveryClient('975bf280-fd91-488c-994c-2f04416e5ee3');` and replace guid with your Project ID.
 6. Save the file.
 
-When you run the sample application now, content is retrieved from your project.
+Now when you run the sample application, content is retrieved from your project.
 
 ## Content administration
 
