@@ -1,5 +1,7 @@
 # Kentico Cloud sample Laravel PHP web application
 
+[![Stack Overflow](https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white)](https://stackoverflow.com/tags/kentico-cloud)
+
 This is a sample website written in PHP7 using [Laravel](https://laravel.com) framework and [Kentico Cloud Delivery SDK for PHP](https://github.com/Kentico/delivery-sdk-php). You can register your account for free at [https://app.kenticocloud.com](https://app.kenticocloud.com).
 
 ## Application setup
