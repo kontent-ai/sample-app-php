@@ -10,16 +10,16 @@
         "php": ">=7.0.0",
         "fideloper/proxy": "~4.0",
         "kentico/kontent-delivery-sdk-php": "^3.0",
-        "laravel/framework": "5.5.*",
+        "laravel/framework": "5.6.*",
         "laravel/tinker": "~1.0",
-        "laravelcollective/html": "^5.5",
+        "laravelcollective/html": "^5.6.0",
         "wa72/htmlpagedom": "^1.4"
     },
     "require-dev": {
         "filp/whoops": "~2.0",
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "~1.0",
-        "phpunit/phpunit": "~6.0"
+        "phpunit/phpunit": "~7.0"
     },
     "autoload": {
         "classmap": [
