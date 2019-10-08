@@ -48,7 +48,7 @@ class DeliverRichTextProcessor {
             }
         });
 
-        $result = $crawler->filter('#process-root')->html();
+        $result = $crawler->filter('#process-root')->saveHTML();
 
         return $result;
     }
