@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Contracts\View\View;
-use KenticoCloud\Delivery\DeliveryClient;
+use Kentico\Kontent\Delivery\DeliveryClient;
 
 class AppServiceProvider extends ServiceProvider
 {
