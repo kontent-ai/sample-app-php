@@ -10,9 +10,9 @@
         "php": ">=7.2.0",
         "fideloper/proxy": "~4.0",
         "kentico/kontent-delivery-sdk-php": "^3.0",
-        "laravel/framework": "5.8.*",
+        "laravel/framework": "6.0.*",
         "laravel/tinker": "~1.0",
-        "laravelcollective/html": "^5.8.0",
+        "laravelcollective/html": "^6.0",
         "wa72/htmlpagedom": "^1.4"
     },
     "require-dev": {
