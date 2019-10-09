@@ -48,6 +48,12 @@ For more info about the API, see the [API reference](https://developer.kenticocl
 
 You can find the Delivery and other SDKs at [Kentico Github Organization](https://github.com/Kentico).
 
+### Known issues	
+
+#### Kub-AT's HTML DOM parser	
+
+When using this sample application with some versions of PHP (reproduced on v 7.3.7), one of the dependencies ([kub-AT/php-simple-html-dom-parser](https://github.com/kub-AT/php-simple-html-dom-parser/)) tends to get stuck in an endless loop of calls to its own destructor. We worked-around this issue by renaming destructors in fetched dependencies every time they are changed. For futher reference, please see the [issue in package's repository repository](https://github.com/sunra/php-simple-html-dom-parser/issues/60) and (original package issue)[https://sourceforge.net/p/simplehtmldom/support-requests/49/].
+
 ## Feedback & Contributing
 
 Check out the [contributing](https://github.com/Kentico/kontent-sample-app-php/blob/master/CONTRIBUTING.md) page to see the best places to file issues, start discussions, and begin contributing.
