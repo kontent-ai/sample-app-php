@@ -6,7 +6,7 @@ This is a sample website written in PHP7 using [Laravel](https://laravel.com) fr
 
 ## Application setup
 
-There should be PHP7.1 and higher and composer installed in your environment. Once these prerequisites are met, you run the application as follows:
+There should be PHP7.2 and higher and composer installed in your environment. Once these prerequisites are met, you run the application as follows:
 
 1. Clone this repository.
 2. `cd` in the project folder and run `composer update` and `php artisan serve` commands.
