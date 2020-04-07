@@ -16,6 +16,7 @@ Once these prerequisites are met, you can run the application as follows:
 1. Clone this repository.
 1. In your command line, navigate to the project folder.
 1. Run `composer install` to install dependencies.
+1. (Optional) Run `composer run prepare-environment` to create a sample [Laravel environment file](https://laravel.com/docs/5.5/configuration#environment-configuration).
 1. Run `php artisan serve` to run the sample app.
 
 The app is now running locally at [`127.0.0.1:8000`](127.0.0.1:8000) (default) and you can open it in your browser.
