@@ -2,6 +2,7 @@
 
 [![Stack Overflow](https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white)](https://stackoverflow.com/tags/kentico-kontent)
 [![Live demo](https://img.shields.io/badge/-Live%20Demo-brightgreen.svg)](https://kontent-sample-app-php.herokuapp.com/)
+[![Heroku Project](https://img.shields.io/badge/-Heroku-7673c0)](https://dashboard.heroku.com/apps/kontent-sample-app-php)
 
 
 This is a sample website written in PHP 7 using [Laravel](https://laravel.com) framework and [Kentico Kontent Delivery SDK for PHP](https://github.com/Kentico/kontent-delivery-sdk-php). You can register your Kontent account for free at [https://app.kontent.ai](https://app.kontent.ai).
