@@ -60,7 +60,7 @@ Check out the [contributing](https://github.com/Kentico/kontent-sample-app-php/b
 
 ### Developing on Windows
 
-Have a look at our cool [tutorial](https://github.com/Kentico/kontent-delivery-sdk-php/wiki/Developing-PHP-in-Visual-Studio-Code-for-Dummies) on developing PHP on Windows with Visual Studio Code!
+Have a look at our [tutorial](https://github.com/Kentico/kontent-delivery-sdk-php/wiki/Developing-PHP-in-Visual-Studio-Code-on-Windows) on developing PHP on Windows with Visual Studio Code!
 
 ### Developing on Linux
 
