@@ -64,7 +64,7 @@ Have a look at our [tutorial](https://github.com/Kentico/kontent-delivery-sdk-ph
 
 ### Developing on Linux
 
-Do you prefer penguins? Check out our [tutorials](https://github.com/Kentico/kontent-delivery-sdk-php/wiki/Configuring-PHP-Storm-on-Linux) on developing PHP on Linux with PhpStorm!
+Check out our [tutorials](https://github.com/Kentico/kontent-delivery-sdk-php/wiki/Developing-PHP-in-PHP-Storm-on-Linux) on developing PHP on Linux with PhpStorm!
 
 ## Author
 
