@@ -77,4 +77,3 @@ Check out the [contributing](https://github.com/Kentico/kontent-sample-app-php/b
 
 We would like to express our thanks to [Stephen Rushing](https://github.com/stephenr85) who created this sample application.
 
-![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/kontent-sample-app-php?pixel)
