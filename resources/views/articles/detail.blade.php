@@ -13,7 +13,7 @@
     </div>
     <div class="row">
         <div class="article-detail-content">
-            {!! deliver_rich_text($article->bodyCopy) !!}
+            <!-- {!! deliver_rich_text($article->bodyCopy) !!} -->
         </div>
     </div>
 </article>

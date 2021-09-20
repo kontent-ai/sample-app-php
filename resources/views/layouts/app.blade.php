@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 
 <html>
+
 <head id="head">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
     <title>@yield('meta_title') - Dancing Goat</title>
     <link href="{{ asset('/css/Site.css') }}" rel="stylesheet">
 </head>
+
 <body>
     <div id="app">
         <div class="page-wrap">
@@ -16,7 +18,7 @@
                         <nav role="navigation">
                             <ul>
                                 <li>
-                                	<a href="{{ route('home') }}">@lang('dancinggoat.Home')</a>
+                                    <a href="{{ route('home')}}">@lang('dancinggoat.Home')</a>
                                 </li>
                                 <li>
                                 	<a href="{{ route('products') }}">@lang('dancinggoat.Coffees')</a>
@@ -42,10 +44,10 @@
                             <nav role="navigation">
                                 <ul class="dropdown-items-list dropdown-desktop-visible">
                                     <li>
-                                    	<a href="?locale=en-us">English</a>
+                                        <a href="?locale=en-us">English</a>
                                     </li>
                                     <li>
-                                    	<a href="?locale=es-es">Español</a>
+                                        <a href="?locale=es-es">Español</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -59,7 +61,7 @@
                     <div class="container">
                         <div class="col-xs-8 col-md-8 col-lg-4 logo">
                             <h1 class="logo">
-                                <a href="{{ route('home') }}" class="logo-link">Dancing Goat</a>
+                                <a href="{ Route::view('home') }" class="logo-link">Dancing Goat</a>
                             </h1>
                         </div>
                     </div>
@@ -105,4 +107,5 @@
 
     @yield('scripts')
 </body>
+
 </html>
