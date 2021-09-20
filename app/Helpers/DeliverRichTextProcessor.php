@@ -15,43 +15,42 @@ class DeliverRichTextProcessor {
 	}
 	
 	public function processText($text){
-        // $crawler = new HtmlPageCrawler('<div id="process-root">' . $text .'</div>');
+        $crawler = new HtmlPageCrawler('<div id="process-root">' . $text .'</div>');
 
-        // $itemObjects = [];
+        $itemObjects = [];
 
-        // $crawler->filter('object[type="application/kenticocloud"]')->each(function($node, $i) use (&$itemObjects) {
+        $crawler->filter('object[type="application/kenticocloud"]')->each(function($node, $i) use (&$itemObjects) {
 
-        //     if($node->attr('data-type') == 'item'){
-        //         $objectID = $node->attr('data-codename');
-        //         $node->attr('data-replace-id', $objectID);
-        //         $itemObjects[$objectID] = $node;
-        //     }
-        //     //may need to process other object types
-        // });
+            if($node->getAttribute('data-type') == 'item'){
+                $objectID = $node->getAttribute('data-codename');
+                $node->setAttribute('data-replace-id', $objectID);
+                $itemObjects[$objectID] = $node;
+            }
+            //may need to process other object types
+        });
 
-        // $items = $this->client->getItems([
-        //     'system.codename[in]' => implode(',', array_keys($itemObjects))
-        // ]);
+        $items = $this->client->getItems([
+            'system.codename[in]' => implode(',', array_keys($itemObjects))
+        ]);
 
-        // foreach($items->items as $item){
-        //     $node = $itemObjects[$item->system->codename];
-        //     $objectView = view('shared.rich_text_item._' . $item->system->type);
-        //     $objectView->with('item', $item);
-        //     $node->replaceWith($objectView->render());
-        // }
+        foreach($items->items as $item){
+            $node = $itemObjects[$item->system->codename];
+            $objectView = view('shared.rich_text_item._' . $item->system->type);
+            $objectView->with('item', $item);
+            $node->replaceWith($objectView->render());
+        }
 
         
-        // // Item links
-        // $crawler->filter('a[data-item-id]')->each(function($node, $i){
-        //     if(!$node->attr('href')){
-        //         $node->attr('href', '/rich_text_link/' . $node->attr('data-item-id'));
-        //     }
-        // });
+        // Item links
+        $crawler->filter('a[data-item-id]')->each(function($node, $i){
+            if(!$node->attr('href')){
+                $node->attr('href', '/rich_text_link/' . $node->attr('data-item-id'));
+            }
+        });
 
-        // $result = $crawler->filter('#process-root')->saveHTML();
+        $result = $crawler->filter('#process-root')->saveHTML();
 
-        // return $result;
-        return $text;
+        return $result;
     }
 
 }

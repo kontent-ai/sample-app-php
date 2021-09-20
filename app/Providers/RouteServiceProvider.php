@@ -7,6 +7,7 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Routing\Router;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -35,29 +36,35 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->configureRateLimiting();
+        //
 
-        $this->routes(function () {
-            Route::prefix('api')
-                ->middleware('api')
-                ->namespace($this->namespace)
-                ->group(base_path('routes/api.php'));
-
-            Route::middleware('web')
-                ->namespace($this->namespace)
-                ->group(base_path('routes/web.php'));
-        });
+        parent::boot();
     }
 
     /**
-     * Configure the rate limiters for the application.
+     * Define the routes for the application.
      *
      * @return void
      */
-    protected function configureRateLimiting()
+    public function map(Router $router, Request $request)
     {
-        RateLimiter::for('api', function (Request $request) {
-            return Limit::perMinute(60)->by(optional($request->user())->id ?: $request->ip());
+        /*
+        $this->mapApiRoutes();
+        $this->mapWebRoutes();
+        */
+
+        $locale = $request->segment(1);
+        
+        if($locale == NULL) {
+            $locale = $this->app->config->get('app.fallback_locale');
+        }
+
+        app()->setLocale($locale);
+
+        $router->group(['namespace' => $this->namespace, 'prefix' => $locale], function ($router) {
+            require app_path('../routes/web.php');
         });
+
+        //
     }
 }
