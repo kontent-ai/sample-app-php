@@ -1,6 +1,16 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ArticlesController;
+use App\Http\Controllers\BrewersController;
+use App\Http\Controllers\CafesController;
+use App\Http\Controllers\CoffeesController;
+use App\Http\Controllers\ContactsController;
+use App\Http\Controllers\DumpController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PartnershipController;
+use App\Http\Controllers\ProductsController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
