@@ -21,7 +21,7 @@
                                     <a href="{{ route('home')}}">@lang('dancinggoat.Home')</a>
                                 </li>
                                 <li>
-                                	<a href="{{ route('products') }}">@lang('dancinggoat.Coffees')</a>
+                                	<a href="{{ route('products') }}">@lang('dancinggoat.Store')</a>
                                 </li>
                                 <li>
                                 	<a href="{{ route('articles') }}">@lang('dancinggoat.Articles')</a>

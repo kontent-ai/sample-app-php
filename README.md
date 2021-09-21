@@ -44,6 +44,31 @@ When you have a Sample Project, follow these steps to connect it to this sample 
 
 Now when you run the sample application, content is retrieved from your project.
 
+### Compile resources
+
+If you want to adjust CSS and Javascript file, you need to rebuild them.
+
+First you need to install [yarn](https://yarnpkg.com/) and instakll dependencies by running following command in repository root.
+
+```sh
+yarn
+```
+
+#### Development compilation
+
+For development purposes you want to turn on development mode of compilation wit hot-reload capabilities.
+
+```sh
+yarn watch // or `yarn dev` for single development compilation
+```
+
+#### Production compilation
+
+Tor production compilation, run:
+
+```sh
+yarn prod
+```
 ## Content administration
 
 1. Navigate to https://app.kontent.ai in your browser.
@@ -63,12 +88,6 @@ For more info about the API, see the [API reference](https://docs.kontent.ai/ref
 
 You can find the Delivery and other SDKs at [Kentico Github Organization](https://github.com/Kentico).
 
-### Known issues	
-
-#### Kub-AT's HTML DOM parser	
-
-When using this sample application with some versions of PHP (reproduced on v 7.3.7), one of the dependencies ([kub-AT/php-simple-html-dom-parser](https://github.com/kub-AT/php-simple-html-dom-parser/)) tends to get stuck in an endless loop of calls to its own destructor. We worked-around this issue by renaming destructors in fetched dependencies every time they are changed. For futher reference, please see the [issue in package's repository repository](https://github.com/sunra/php-simple-html-dom-parser/issues/60) and (original package issue)[https://sourceforge.net/p/simplehtmldom/support-requests/49/].
-
 ## Feedback & Contributing
 
 Check out the [contributing](https://github.com/Kentico/kontent-sample-app-php/blob/master/CONTRIBUTING.md) page to see the best places to file issues, start discussions, and begin contributing.
@@ -76,4 +95,3 @@ Check out the [contributing](https://github.com/Kentico/kontent-sample-app-php/b
 ## Author
 
 We would like to express our thanks to [Stephen Rushing](https://github.com/stephenr85) who created this sample application.
-
