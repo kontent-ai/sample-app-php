@@ -25,12 +25,13 @@ class Language {
 	public function handle($request, Closure $next)
 	{
 		$localeQuery = $request->input('locale');
+
         // Make sure current locale exists.
 		$locale = $request->segment(1);
-
+		
 		if ( ! array_key_exists($locale, $this->app->config->get('app.locales'))) {
 			$segments = $request->segments();
-
+			
 			$locale = $localeQuery ? $localeQuery : $this->app->config->get('app.fallback_locale');
             array_unshift($segments, $locale);
 

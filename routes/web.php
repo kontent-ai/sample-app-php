@@ -33,7 +33,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 
 Route::get('/articles', [ArticlesController::class, 'index'])->name('articles');
-Route::get('/articles/show/{slug}', [ArticlesController::class, 'detail']);
+Route::get('/articles/show/{slug}', [ArticlesController::class, 'detail'])->name('articles.show');
 
 Route::get('/cafes', [CafesController::class, 'index'])->name('cafes');
 
