@@ -1,5 +1,18 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ArticlesController;
+use App\Http\Controllers\BrewersController;
+use App\Http\Controllers\CafesController;
+use App\Http\Controllers\CoffeesController;
+use App\Http\Controllers\ContactsController;
+use App\Http\Controllers\DumpController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PartnershipController;
+use App\Http\Controllers\ProductsController;
+
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,32 +24,36 @@
 |
 */
 
-Route::get('/', 'HomeController@index')->name('home');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/about', 'AboutController@index')->name('about');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/articles', 'ArticlesController@index')->name('articles');
-Route::get('/articles/show/{slug}', 'ArticlesController@detail');
+Route::get('/about', [AboutController::class, 'index'])->name('about');
 
-Route::get('/cafes', 'CafesController@index')->name('cafes');
+Route::get('/articles', [ArticlesController::class, 'index'])->name('articles');
+Route::get('/articles/show/{slug}', [ArticlesController::class, 'detail'])->name('articles.show');
 
-Route::get('/contacts', 'ContactsController@index')->name('contacts');
+Route::get('/cafes', [CafesController::class, 'index'])->name('cafes');
 
-Route::any('/partnership', 'PartnershipController@index')->name('partnership');
+Route::get('/contacts', [ContactsController::class, 'index'])->name('contacts');
 
-Route::get('/product-catalog', 'ProductsController@index')->name('products');;
+Route::any('/partnership', [PartnershipController::class, 'index'])->name('partnership');
 
-Route::get('/product-catalog/detail/{slug}', 'ProductsController@detail')->name('product.detail');
+Route::get('/product-catalog', [ProductsController::class, 'index'])->name('products');;
 
-Route::get('/product-catalog/coffees', 'CoffeesController@index');
-Route::get('/product-catalog/coffees/filter', 'CoffeesController@filter')->name('products.coffees.filter');
+Route::get('/product-catalog/detail/{slug}', [ProductsController::class, 'detail'])->name('product.detail');
 
-Route::get('/product-catalog/brewers', 'BrewersController@index');
-Route::get('/product-catalog/brewers/filter', 'BrewersController@filter')->name('products.brewers.filter');
+Route::get('/product-catalog/coffees', [CoffeesController::class, 'index'])->name('coffees');
+Route::get('/product-catalog/coffees/filter', [CoffeesController::class, 'filter'])->name('products.coffees.filter');
+
+Route::get('/product-catalog/brewers', [BrewersController::class, 'index'])->name('brewers');
+Route::get('/product-catalog/brewers/filter', [BrewersController::class, 'filter'])->name('products.brewers.filter');
 
 /* DEBUGGING ONLY */
-Route::get('/dump/items', 'DumpController@items');
-Route::get('/dump/item/{codename}', 'DumpController@item');
+Route::get('/dump/items', [DumpController::class, 'items']);
+Route::get('/dump/item/{codename}', [DumpController::class, 'item']);
 
-Route::get('/dump/taxonomies', 'DumpController@taxonomies');
-Route::get('/dump/taxonomy/{codename}', 'DumpController@taxonomy');
+Route::get('/dump/taxonomies', [DumpController::class, 'taxonomies']);
+Route::get('/dump/taxonomy/{codename}', [DumpController::class, 'taxonomy']);

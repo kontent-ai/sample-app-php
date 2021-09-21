@@ -21,9 +21,9 @@ class DeliverRichTextProcessor {
 
         $crawler->filter('object[type="application/kenticocloud"]')->each(function($node, $i) use (&$itemObjects) {
 
-            if($node->attr('data-type') == 'item'){
-                $objectID = $node->attr('data-codename');
-                $node->attr('data-replace-id', $objectID);
+            if($node->getAttribute('data-type') == 'item'){
+                $objectID = $node->getAttribute('data-codename');
+                $node->setAttribute('data-replace-id', $objectID);
                 $itemObjects[$objectID] = $node;
             }
             //may need to process other object types

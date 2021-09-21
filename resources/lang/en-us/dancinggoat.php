@@ -245,8 +245,8 @@ Just register and wait two days for our sales person to contact you. We do the m
 	'SignIn_Password' => '',
 	'SignIn_StaySignedIn' => '',
 	'SignOut' => '',
-	'Store' => '',
 	*/
+	'Store' => 'Store',
 	'Story_Title' => 'Our Story',
 	'Story_WholeStory' => 'Read the whole story',
 	/*

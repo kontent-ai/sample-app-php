@@ -1,6 +1,6 @@
 <div class="col-md-3">
     <div class="article-tile">
-        <a href="/articles/show/{{ $article->system->codename }}">
+        <a href="{{ route('articles.show', ['slug' => $article->system->codename]) }}">
             <img alt="{{ $article->teaserImage[0]->description }}" class="article-tile-image" src="{{ $article->teaserImage[0]->url }}" title="{{ $article->teaserImage[0]->description }}">
         </a>
         <div class="article-tile-date">
@@ -8,7 +8,7 @@
         </div>
         <div class="article-tile-content">
             <h2 class="h4">
-                <a href="/articles/show/{{ $article->system->codename }}">{{ $article->title }}</a>
+                <a href="{{  route('articles.show', ['slug' => $article->system->codename]) }}">{{ $article->title }}</a>
             </h2>
             <p class="article-tile-text">
                 {!! $article->summary !!}
