@@ -31,15 +31,15 @@ class BrewersController extends Controller
 		];
 
 		$selected_manufacturer = $request->input('manufacturer');
-		if(count($selected_manufacturer)){
+		if($selected_manufacturer != null && count($selected_manufacturer)){
 			$params['elements.manufacturer[any]'] = implode(',', $selected_manufacturer);
 		}
-
+		
 		$selected_product_statuses = $request->input('product_status');
-		if(count($selected_product_statuses)){
+		if($selected_product_statuses != null && count($selected_product_statuses)){
 			$params['elements.product_status[any]'] = implode(',', $selected_product_statuses);
 		}
-
+		
 		$coffees = $client->getItems($params);
 
 		$viewData = [

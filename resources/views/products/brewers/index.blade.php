@@ -4,6 +4,7 @@
 
 @section('body')
 
+@include('products._navigation')
 
 <div class="product-page row">
     <div class="flex">

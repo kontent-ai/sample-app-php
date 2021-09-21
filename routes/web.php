@@ -45,10 +45,10 @@ Route::get('/product-catalog', [ProductsController::class, 'index'])->name('prod
 
 Route::get('/product-catalog/detail/{slug}', [ProductsController::class, 'detail'])->name('product.detail');
 
-Route::get('/product-catalog/coffees', [CoffeesController::class, 'index']);
+Route::get('/product-catalog/coffees', [CoffeesController::class, 'index'])->name('coffees');
 Route::get('/product-catalog/coffees/filter', [CoffeesController::class, 'filter'])->name('products.coffees.filter');
 
-Route::get('/product-catalog/brewers', [BrewersController::class, 'index']);
+Route::get('/product-catalog/brewers', [BrewersController::class, 'index'])->name('brewers');
 Route::get('/product-catalog/brewers/filter', [BrewersController::class, 'filter'])->name('products.brewers.filter');
 
 /* DEBUGGING ONLY */

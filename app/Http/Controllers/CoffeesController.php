@@ -31,12 +31,12 @@ class CoffeesController extends Controller
 		];
 
 		$selected_processings = $request->input('processing');
-		if(count($selected_processings)){
+		if($selected_processings != null && count($selected_processings)){
 			$params['elements.processing[any]'] = implode(',', $selected_processings);
 		}
 
 		$selected_product_statuses = $request->input('product_status');
-		if(count($selected_product_statuses)){
+		if($selected_product_statuses != null && count($selected_product_statuses)){
 			$params['elements.product_status[any]'] = implode(',', $selected_product_statuses);
 		}
 
