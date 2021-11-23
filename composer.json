@@ -11,7 +11,7 @@
     "php": "^7.3|^8.0",
     "fruitcake/laravel-cors": "^2.0",
     "guzzlehttp/guzzle": "^7.0.1",
-    "kentico/kontent-delivery-sdk-php": "^3.1",
+    "kentico/kontent-delivery-sdk-php": "^4.0",
     "laravel/framework": "^8.54",
     "laravel/sanctum": "^2.11",
     "laravel/tinker": "^2.5",
@@ -42,6 +42,10 @@
     }
   },
   "scripts": {
+    "prepare-environment": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+      "@php artisan key:generate"
+    ],
     "pre-install-cmd": [
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
     ],
