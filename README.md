@@ -4,7 +4,6 @@
 [![Live demo](https://img.shields.io/badge/-Live%20Demo-brightgreen.svg)](https://kontent-sample-app-php.herokuapp.com/)
 [![Heroku Project](https://img.shields.io/badge/-Heroku-7673c0)](https://dashboard.heroku.com/apps/kontent-sample-app-php)
 
-
 This is a sample website written in PHP 7 using [Laravel](https://laravel.com) framework and [Kentico Kontent Delivery SDK for PHP](https://github.com/Kentico/kontent-delivery-sdk-php). You can register your Kontent account for free at [https://app.kontent.ai](https://app.kontent.ai).
 
 ## Application setup
@@ -30,7 +29,7 @@ Alternatively, you can also deploy your application to your Apache server  by cl
 
 This sample website displays content from a Sample Project that demonstrates Kentico Kontent features and best practices. This fully featured project contains marketing content for Dancing Goat – an imaginary chain of coffee shops. By default, this sample website uses a shared project where the content remains constant for everyone.
 
-You can change the source Kentico Kontent project to your own project to be able to change the content. If you don't have your own Sample Project, any admin of a Kentico Kontent subscription [can generate one](https://docs.kontent.ai/tutorials/set-up-projects/manage-projects/managing-projects#a-creating-a-sample-project).
+You can change the source Kentico Kontent project to your own project to be able to change the content. If you don't have your own Sample Project, any admin of a Kentico Kontent subscription [can generate one](https://kontent.ai/learn/tutorials/manage-kontent/projects/manage-projects#a-create-a-sample-project).
 
 When you have a Sample Project, follow these steps to connect it to this sample app:
 
@@ -69,6 +68,7 @@ Tor production compilation, run:
 ```sh
 yarn prod
 ```
+
 ## Content administration
 
 1. Navigate to https://app.kontent.ai in your browser.
@@ -84,7 +84,7 @@ You can retrieve content either through the Kentico Kontent Delivery SDKs or the
 * For published content, use `https://deliver.kontent.ai/PROJECT_ID/items`.
 * For unpublished content, use `https://preview-deliver.kontent.ai/PROJECT_ID/items`.
 
-For more info about the API, see the [API reference](https://docs.kontent.ai/reference/kentico-kontent-apis-overview).
+For more info about the API, see the [API reference](https://kontent.ai/learn/reference/kontent-apis-overview).
 
 You can find the Delivery and other SDKs at [Kentico Github Organization](https://github.com/Kentico).
 
