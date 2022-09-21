@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Kentico\Kontent\Delivery\DeliveryClient;
+use Kontent\Ai\Delivery\DeliveryClient;
 
 class AppServiceProvider extends ServiceProvider
 {

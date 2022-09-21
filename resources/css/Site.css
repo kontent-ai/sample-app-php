@@ -2599,9 +2599,6 @@ dd.product-price--retail {
 .icon-laptop:before {
   content: "\E65D";
 }
-.icon-kentico:before {
-  content: "\E65F";
-}
 .icon-integration-scheme:before {
   content: "\E661";
 }
@@ -4161,9 +4158,6 @@ dd.product-price--retail {
 }
 .icon-w-openid-required-data:before {
   content: "\E6E4";
-}
-.icon-w-powered-by-kentico:before {
-  content: "\E65F";
 }
 .icon-w-bing-translator:before {
   content: "\E6CA";

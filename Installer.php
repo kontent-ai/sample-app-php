@@ -1,6 +1,6 @@
-<?php 
+<?php
 /**
- * When serving KenticoCloud PHP Sample Application using `php artisan serve`
+ * When serving Kontent.ai PHP Sample Application using `php artisan serve`
  * command, the combination of Laravel (5.3+) and of a package
  * kub-at/php-simple-html-dom-parser exhibits an issue where laravel gets stuck
  * in an infinite loop of calls.
@@ -43,15 +43,15 @@ function countFileLines($file)
 {
     $fileAPI = new \SplFileObject($file, 'r');
     $fileAPI->seek(PHP_INT_MAX);
-    return $fileAPI->key() + 1; 
+    return $fileAPI->key() + 1;
 }
 
 
 /**
- * Searches file for occurrence of 'function __destruct' and replaces it with 
+ * Searches file for occurrence of 'function __destruct' and replaces it with
  * improbably manually selectable name. This prevents combination of Laravel
  * and kub-at/php-simple-html-dom-parser-package to become stuck in an endless
- * loop of __destruct calls by renaming __destruct function. 
+ * loop of __destruct calls by renaming __destruct function.
  */
 function removeDestructorFunction($file)
 {
@@ -74,7 +74,7 @@ function showErrorFixingMessage()
     echo "=====================================================================";
     echo "ERROR: Fixing kub-at/php-simple-html-dom-parser package. " . PHP_EOL;
     echo "Please manually modify file: " . PHP_EOL;
-    echo "$file" . PHP_EOL ; 
+    echo "$file" . PHP_EOL ;
     echo "And rename all occurences of __destruct() function." . PHP_EOL;
     echo "=====================================================================";
 }
@@ -83,7 +83,7 @@ function showErrorFixingMessage()
 echo "Installer will now remove destructors from kub-AT/php-simple-html-dom-parser package." . PHP_EOL;
 foreach (getAllPhpFiles('vendor' . DIRECTORY_SEPARATOR . PACKAGE_TO_FIX) as $file)
 {
-    // Lets base this on reasonable thought that HTML parser will never fit 
+    // Lets base this on reasonable thought that HTML parser will never fit
     // into less than 1000 lines of code and ignore all files that contain
     // less lines of code. Note that this approach assumes very specific
     // kub-at/php-simple-html-dom-parser package structure and will not work
