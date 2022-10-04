@@ -1,8 +1,5 @@
 # Kontent.ai sample Laravel PHP web application
 
-[![Live demo](https://img.shields.io/badge/-Live%20Demo-brightgreen.svg)](https://kontent-ai-sample-app-php.herokuapp.com/)
-[![Heroku Project](https://img.shields.io/badge/-Heroku-7673c0)](https://dashboard.heroku.com/apps/kontent-ai-sample-app-php)
-
 [![Stack Overflow](https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white)](https://stackoverflow.com/tags/kontent-ai)
 [![Discord](https://img.shields.io/discord/821885171984891914?color=%237289DA&label=Kontent.ai%20Discord&logo=discord)](https://discord.gg/SKCxwPtevJ)
 
