@@ -38,10 +38,8 @@ When you have a Sample Project, follow these steps to connect it to this sample 
 1. In Kontent.ai, choose Project settings from the app menu.
 1. Under Development, choose API keys.
 1. Copy your Project ID.
-1. In the sample app folder, open the `app\Providers\AppServiceProvider.php` file.
-1. At the bottom, find the line that ends with `new DeliveryClient('975bf280-fd91-488c-994c-2f04416e5ee3');`.
-1. Replace `975bf280-fd91-488c-994c-2f04416e5ee3` with the ID of your Sample Project.
-1. Save the file.
+1. Set you `PROJECT_ID` environment variable - most probably in `.env` file
+1. Save the `.env` file and restart the server.
 
 Now when you run the sample application, content is retrieved from your project.
 

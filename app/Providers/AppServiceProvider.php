@@ -14,7 +14,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $deliverClient = new DeliveryClient('975bf280-fd91-488c-994c-2f04416e5ee3');
+        $projectId =  env('PROJECT_ID');
+        $deliverClient = new DeliveryClient($projectId != NULL && strlen($projectId) > 0 ? $projectId : '975bf280-fd91-488c-994c-2f04416e5ee3');
         $this->app->instance('DeliverClient', $deliverClient);
     }
 
