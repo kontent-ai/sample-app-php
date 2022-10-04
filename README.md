@@ -77,7 +77,7 @@ yarn prod
 1. Sign in with your credentials.
 1. Manage content in the content administration interface of your sample project.
 
-You can learn more about content editing with Kontent.ai in the documentation.
+You can learn more about content editing with in the [Kontent.ai Learn portal](https://kontent.ai/learn/).
 
 ## Content delivery
 
